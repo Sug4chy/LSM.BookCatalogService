@@ -1,0 +1,6 @@
+﻿services:
+  lsm.bookcatalogservice:
+    image: lsm.bookcatalogservice
+    build:
+      context: .
+      dockerfile: LSM.BookCatalogService/Dockerfile
