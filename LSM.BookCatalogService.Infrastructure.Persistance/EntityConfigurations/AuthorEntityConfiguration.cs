@@ -49,7 +49,7 @@ public sealed class AuthorEntityConfiguration : IEntityTypeConfiguration<Databas
             .HasForeignKey(ab => ab.AuthorId);
 
         builder.HasOne(a => a.Country)
-            .WithMany(a => a.Authors)
+            .WithMany(c => c.Authors)
             .HasForeignKey(a => a.CountryId);
         builder.Property(a => a.CountryId)
             .IsRequired()

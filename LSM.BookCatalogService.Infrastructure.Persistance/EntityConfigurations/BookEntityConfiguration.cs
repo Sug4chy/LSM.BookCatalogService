@@ -1,5 +1,4 @@
 using LSM.BookCatalogService.Infrastructure.Persistance.Models;
-using LSM.BookCatalogService.Infrastructure.Persistance.Models.Helpers;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -71,12 +70,12 @@ public sealed class BookEntityConfiguration : IEntityTypeConfiguration<DatabaseB
             .HasForeignKey(i => i.BookId);
 
         builder.HasMany(b => b.Categories)
-            .WithMany(c => c.Books)
-            .UsingEntity<DatabaseBookCategoryBook>();
+            .WithOne(c => c.Book)
+            .HasForeignKey(c => c.BookId);
 
         builder.HasMany(b => b.Genres)
-            .WithMany(g => g.Books)
-            .UsingEntity<DatabaseBookGenre>();
+            .WithOne(g => g.Book)
+            .HasForeignKey(g => g.BookId);
 
         builder.HasOne(b => b.PublishingHouse)
             .WithMany(ph => ph.Books)

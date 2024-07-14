@@ -7,5 +7,5 @@ public sealed class DatabaseBookCategory
     public Guid Id { get; set; }
     public required string Name { get; set; }
     
-    public ICollection<DatabaseBook>? Books { get; set; }
+    public ICollection<DatabaseBookCategoryBook>? Books { get; set; }
 }
