@@ -22,9 +22,9 @@ public sealed class DatabaseBook
     
     public ICollection<DatabaseIllustration>? Illustrations { get; set; }
     
-    public ICollection<DatabaseBookCategoryBook>? Categories { get; set; }
+    public ICollection<DatabaseBookCategory>? Categories { get; set; }
     
-    public ICollection<DatabaseBookGenre>? Genres { get; set; }
+    public ICollection<DatabaseGenre>? Genres { get; set; }
     
     public Guid PublishingHouseId { get; set; }
     public DatabasePublishingHouse? PublishingHouse { get; set; }
