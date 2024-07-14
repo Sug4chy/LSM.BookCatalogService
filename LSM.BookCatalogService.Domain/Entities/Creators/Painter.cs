@@ -10,9 +10,8 @@ public sealed class Painter(
     Country placeOfBirth,
     ContactInformation? contactInformation = null,
     DateTime? deathDate = null,
-    string? shortBiography = null,
-    Portrait? portrait = null
-) : Creator(name, birthDate, placeOfBirth, contactInformation, deathDate, shortBiography, portrait), 
+    string? shortBiography = null
+) : Creator(name, birthDate, placeOfBirth, contactInformation, deathDate, shortBiography), 
     IPortraitCreator
 {
     private readonly List<Painting> _paintings = [];

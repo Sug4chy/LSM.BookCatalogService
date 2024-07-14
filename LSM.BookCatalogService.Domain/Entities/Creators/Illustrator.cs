@@ -9,9 +9,8 @@ public sealed class Illustrator(
     Country placeOfBirth,
     ContactInformation? contactInformation = null,
     DateTime? deathDate = null,
-    string? shortBiography = null,
-    Portrait? portrait = null
-) : Creator(name, birthDate, placeOfBirth, contactInformation, deathDate, shortBiography, portrait)
+    string? shortBiography = null
+) : Creator(name, birthDate, placeOfBirth, contactInformation, deathDate, shortBiography)
 {
     private readonly List<Illustration> _illustrations = [];
 

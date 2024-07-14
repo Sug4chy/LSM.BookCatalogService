@@ -1,5 +1,4 @@
 using LSM.BookCatalogService.Domain.Entities.Books;
-using LSM.BookCatalogService.Domain.Entities.Images;
 using LSM.BookCatalogService.Domain.ValueObjects;
 
 namespace LSM.BookCatalogService.Domain.Entities.Creators;
@@ -10,9 +9,8 @@ public sealed class VoiceActor(
     Country placeOfBirth,
     ContactInformation? contactInformation = null,
     DateTime? deathDate = null,
-    string? shortBiography = null,
-    Portrait? portrait = null
-) : Creator(name, birthDate, placeOfBirth, contactInformation, deathDate, shortBiography, portrait)
+    string? shortBiography = null
+) : Creator(name, birthDate, placeOfBirth, contactInformation, deathDate, shortBiography)
 {
     private readonly List<AudioBook> _audioBooks = [];
 
