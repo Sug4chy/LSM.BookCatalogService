@@ -12,5 +12,6 @@ public sealed class DatabasePortrait
     public Guid AuthorId { get; set; }
     public DatabaseAuthor? Author { get; set; }
     
-    // TODO: Creator (ID here)
+    public Guid CreatorId { get; set; }
+    public DatabasePortraitCreator? Creator { get; set; }
 }

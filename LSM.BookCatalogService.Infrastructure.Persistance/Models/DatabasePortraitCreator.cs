@@ -1,8 +1,6 @@
-using LSM.BookCatalogService.Infrastructure.Persistance.Models.Helpers;
-
 namespace LSM.BookCatalogService.Infrastructure.Persistance.Models;
 
-public sealed class DatabaseAuthor
+public sealed class DatabasePortraitCreator
 {
     public Guid Id { get; set; }
     public required string FullName { get; set; }
@@ -12,10 +10,8 @@ public sealed class DatabaseAuthor
     public DateTime? DeathDate { get; set; }
     public string? ShortBiography { get; set; }
     
-    public ICollection<DatabaseAuthorBook>? Books { get; set; }
-    
     public Guid CountryId { get; set; }
     public DatabaseCountry? Country { get; set; }
     
-    public DatabasePortrait? Portrait { get; set; }
+    public ICollection<DatabasePortrait>? Portraits { get; set; }
 }

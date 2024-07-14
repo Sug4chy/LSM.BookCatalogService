@@ -6,7 +6,10 @@ public sealed class DatabaseCountry
     public required string Name { get; set; }
     
     public ICollection<DatabaseAuthor>? Authors { get; set; }
-    // TODO: VoiceActors
-    // TODO: Illustrator
-    // TODO: PortraitCreators
+    
+    public ICollection<DatabaseVoiceActor>? VoiceActors { get; set; }
+    
+    public ICollection<DatabaseIllustrator>? Illustrators { get; set; }
+    
+    public ICollection<DatabasePortraitCreator>? PortraitCreators { get; set; }
 }

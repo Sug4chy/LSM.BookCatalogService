@@ -17,10 +17,17 @@ public sealed class DatabaseBook
     public int? PagesCount { get; set; }
     public string? FilePath { get; set; }
     
-    // TODO: VoiceActor (ID here)
-    // TODO: Illustrations
-    // TODO: Categories (N:N)
-    // TODO: Genres (N:N)
-    // TODO: PublishingHouse (ID here)
+    public Guid? VoiceActorId { get; set; }
+    public DatabaseVoiceActor? VoiceActor { get; set; }
+    
+    public ICollection<DatabaseIllustration>? Illustrations { get; set; }
+    
+    public ICollection<DatabaseBookCategoryBook>? Categories { get; set; }
+    
+    public ICollection<DatabaseBookGenre>? Genres { get; set; }
+    
+    public Guid PublishingHouseId { get; set; }
+    public DatabasePublishingHouse? PublishingHouse { get; set; }
+    
     public ICollection<DatabaseAuthorBook>? Authors { get; set; }
 }
